@@ -17,6 +17,15 @@ namespace ShapesInheritanceExample
             this.radius = radius; //the only thingthat is different from shape
         }
 
+        public override double calcArea()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override double calcPerimeter()
+        {
+            throw new NotImplementedException();
+        }
 
         public override void draw(Graphics g)
         {
@@ -26,6 +35,11 @@ namespace ShapesInheritanceExample
             g.FillEllipse(b, x, y, radius * 2, radius * 2);
             g.DrawEllipse(p, x, y, radius * 2, radius * 2);
             base.draw(g);
+        }
+
+        public override void set(Color c, params int[] list)
+        {
+            throw new NotImplementedException();
         }
 
         public override string ToString() //all classes inherit from object and ToString() is abstract in object

@@ -17,6 +17,15 @@ namespace ShapesInheritanceExample
             this.height = height;
         }
 
+        public override double calcArea()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override double calcPerimeter()
+        {
+            throw new NotImplementedException();
+        }
 
         public override void draw(Graphics g)
         {
@@ -25,6 +34,11 @@ namespace ShapesInheritanceExample
             g.FillRectangle(b, x, y, width, height);
             g.DrawRectangle(p, x, y, width, height);
             base.draw(g);
+        }
+
+        public override void set(Color c, params int[] list)
+        {
+            throw new NotImplementedException();
         }
     }
 }

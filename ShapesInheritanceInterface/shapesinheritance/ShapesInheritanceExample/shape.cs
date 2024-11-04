@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ShapesInheritanceExample
 {
-    abstract class Shape
+    abstract class Shape:IShape
     {
 
         protected Color colour; //shape's colour
@@ -22,6 +22,9 @@ namespace ShapesInheritanceExample
             //can't provide anything else as "shape" is too general
         }
 
+        public abstract double calcArea();
+        public abstract double calcPerimeter();
+
         public virtual void draw(Graphics g)
         {
             Font drawFont = new Font("Arial", 12);
@@ -32,6 +35,8 @@ namespace ShapesInheritanceExample
             String text = this.ToString();
             g.DrawString(text, drawFont, drawBrush, this.x, this.y, drawFormat);
         }
+
+        public abstract void set(Color c, params int[] list);
 
         public override string ToString() //get the standard object name and break hierarchy to get just the name
         {
